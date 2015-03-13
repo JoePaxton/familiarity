@@ -12,8 +12,7 @@ artist's active years.
 # Resources
 1. [familiarity]
 2. [Echo Nest Artist API]
-3. [artist.py]
-4. [matplotlib]
+3. [matplotlib]
 
 
 ### 1. Mini-abstract and relevance of [familiarity]:
@@ -40,7 +39,11 @@ ago. The [familiarity] attribute is an easier value to analyze the strength betw
 artists, especially when it comes to different time periods. 
 
 ### 2. Mini-abstract and relevance of [Echo Nest Artist API]:
-
+There is a function in the [Echo Nest Artist API] called ```get_years_active()``` and it returns
+the 'start' and 'end' year (if there is one) of the artist's years active. In our case, we are inputting
+"Lupe Fiasco" as our artist into the ```Artist()``` function from the ```pyechonest``` module. By
+calling the ```get_years_active()``` function on this particular artist, it does not show the 'end'
+date because he is still currently active as an artist.
 
 ```python
 from pyechonest import artist
@@ -48,17 +51,18 @@ from pyechonest import artist
 a = artist.Artist("Lupe Fiasco")
 a.get_years_active()
 ```
+"Lupe Fiasco" started his career in ```[{u'start': 1999}]```. We can see that there is no 'end' date,
+which concludes that he is still a working artist. When I inputted "Jimi Hendrix" into the ```Artist()```
+function and ```[{u'start': 1963, u'end': 1970}]``` was printed to the console after I called the
+```get_years_active()``` function. Again, this proves that this function returns a list of a start
+date and an end date if the artist is not considered an artist anymore.
 
-### 3. Mini-abstract and relevance of [artist.py]:
-
-
-### 4. Mini-abstract and relevance of [matplotlib]:
+### 3. Mini-abstract and relevance of [matplotlib]:
 
 
 
 
 [familiarity]: http://developer.echonest.com/forums/thread/839
-[Echo Nest Artist API]: http://developer.echonest.com/docs/v4/artist.html
-[artist.py]: https://github.com/echonest/pyechonest/blob/master/pyechonest/artist.py  
+[Echo Nest Artist API]: https://github.com/echonest/pyechonest/blob/master/pyechonest/artist.py 
 [matplotlib]: http://matplotlib.org/
 
