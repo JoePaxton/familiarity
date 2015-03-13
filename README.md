@@ -58,11 +58,26 @@ function and ```[{u'start': 1963, u'end': 1970}]``` was printed to the console a
 date and an end date if the artist is not considered an artist anymore.
 
 ### 3. Mini-abstract and relevance of [matplotlib]:
+Using the [matplotlib] API, I was able to ...
 
+```python
 
+///snippet of code to represent an artist's familiarity with the years they have been active
+///in a plot. What kind of plot? - Label all axes, title the plot, and make it look 'good'. 
 
+```
+
+We need to compare artist's who have a high [familiarity] while being active for a short amount of time
+(in years) against artist who have a lower [familiarity] while being active for a longer period of time
+(in years). We can determine the "strength" of the artist's [familiarity] using the algorithm I implemented
+below:
+
+```python
+
+///code calculation for strength
+
+```
 
 [familiarity]: http://developer.echonest.com/forums/thread/839
 [Echo Nest Artist API]: https://github.com/echonest/pyechonest/blob/master/pyechonest/artist.py 
 [matplotlib]: http://matplotlib.org/
-
