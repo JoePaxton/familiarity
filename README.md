@@ -41,9 +41,9 @@ different artists, especially when it comes to different time periods.
 
 ### 2. Mini-abstract and relevance of [Echo Nest Artist API]:
 There is a function in the [Echo Nest Artist API] called ```get_years_active()``` and it returns
-the 'start' and 'end' year (if there is an 'end') of the artist's years active. In our case, we are
+the *start* and *end* year (if there is an *end*) of the artist's years active. In our case, we are
 inputting "Lupe Fiasco" as our artist into the ```Artist()``` function from the ```pyechonest``` module.
-By calling the ```get_years_active()``` function on this particular artist, it does not show the 'end'
+By calling the ```get_years_active()``` function on this particular artist, it does not show the *end*
 date because he is still currently active as an artist.
 
 ```python
