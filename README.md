@@ -72,7 +72,7 @@ period of time (in *years*). We can determine the "strength" of the artist's [fa
 an algorithm I implemented below:
 
 ```python
-    a = artist.Artist("Lupe Fiasco")
+    a = artist.Artist("Chance, The Rapper")
     x = a.get_years_active()
     familiarity = a.familiarity
 
