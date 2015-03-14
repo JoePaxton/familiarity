@@ -84,7 +84,10 @@ below:
 
 ```python
 
-//calculation for strength
+"""Snippet of code that shows the "strength" of an artist using my implementation of how their
+familiarity is measured amongst the years they are active. This may be biased in the sense, that
+there are new artists that are competing against artists who were on a two decade 'run'.
+"""
 
 ```
 
