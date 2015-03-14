@@ -35,9 +35,11 @@ This shows that the artist is very well-known, but not overwhelmingly "famous".
 
 On the other hand, the 'hotttness' attribute gives a floating-point decimal value that displays the
 "hype" or "buzz" an artist is getting currently. The 'hotttnesss' attribute is biased, in the sense
-that the information is only useful for present day data and will be much different compared to artists
-who had more "hype" years ago, like *The Beatles*. There is not much blog posts, website articles, or
-other website information about popular artists decades ago.
+that the attribute computes the "hype" currently; therefore, this does not accurately reflect the
+"hype" that some artists' receive if it was years ago such as *The Beatles*. In other words, if *The Beatles*
+were a band today, the 'hotttnesss' attribute would return a higher floating-point value. There is not much
+blog posts, website articles, or other website information about popular artists "back in the day" who are
+not that relevant today.
 
 The [familiarity] attribute is an easier value to analyze for the "strength value" between
 different artists, especially when it comes to different time periods. 
