@@ -2,7 +2,7 @@
 We want to visualize and determine the strength of an artist's [familiarity] over the
 artist's active years.
 
-# Question
+# Questions
 1. What kind of data does the [familiarity] attribute provide?
 2. How can we determine how long an artist has been active?
 3. Can we use [matplotlib] to visualize data we have?
@@ -17,11 +17,12 @@ artist's active years.
 
 ### 1. Mini-abstract and relevance of [familiarity]:
 Familiarity corresponds to how well-known an artist is. For example, if you were to survey a
-thousand people and ask them who has heard of *Michael Jackson* and *Hot Rod Shopping Cart*, the
-numbers for *Michael* are going to be much higher than the *Hot Rod Shopping Car*. The [familiarity]
+thousand people and ask them, "who has heard of *Michael Jackson* and *Japanese Cartoon*?", the
+numbers for *Michael Jackson* are going to be much higher than *Japanese Cartoon*. The [familiarity]
 attribute is a floating-point value between 0 and 1.0, where 1.0 is the most "familiar" or
-"famous" an artist is. Echo Nest does not show share their algorithm for [familiarity], but it is
-based on upon the total activity they see for artists on the thousands of websites they crawl. 
+"famous" an artist can be. Echo Nest does not share their implementation of their algorithm for [familiarity],
+but it is based on upon the total activity they see for artists on the copious amounts of websites they
+actively crawl. 
 
 ```python
 from pyechonest import artist
@@ -33,10 +34,12 @@ The [familiarity] of the artist "Lupe Fiasco" has a floating-point decimal value
 This shows that the artist is very well-known, but not overwhelmingly "famous".
 
 On the other hand, the 'hotttness' attribute gives a floating-point decimal value that displays the
-"hype" or "buzz" an artist is getting currently. The 'hotttnesss' attribute is biased in the sense
-that the information is only useful for present day data and will be much different than artists in
-the past. There is not much blog posts, website articles, or other website information about popular
-artists decades ago. The [familiarity] attribute is an easier value to analyze the strength between
+"hype" or "buzz" an artist is getting currently. The 'hotttnesss' attribute is biased, in the sense
+that the information is only useful for present day data and will be much different compared to artists
+who had more "hype" years ago, like *The Beatles*. There is not much blog posts, website articles, or
+other website information about popular artists decades ago.
+
+The [familiarity] attribute is an easier value to analyze for the "strength value" between
 different artists, especially when it comes to different time periods. 
 
 ### 2. Mini-abstract and relevance of [Echo Nest Artist API]:
@@ -44,7 +47,7 @@ There is a function in the [Echo Nest Artist API] called ```get_years_active()``
 the *start* and *end* year (if there is an *end*) of the artist's years active. In our case, we are
 inputting "Lupe Fiasco" as our artist into the ```Artist()``` function from the ```pyechonest``` module.
 By calling the ```get_years_active()``` function on this particular artist, it does not show the *end*
-date because he is still currently active as an artist.
+date because he is currently active as an artist. 
 
 ```python
 from pyechonest import artist
@@ -52,12 +55,13 @@ from pyechonest import artist
 a = artist.Artist("Lupe Fiasco")
 a.get_years_active()
 ```
-"Lupe Fiasco" started his career in ```[{u'start': 1999}]```. We can see that there is no *end* date,
-which concludes that he is still a working artist.
+"Lupe Fiasco" started his career in ```[{u'start': 1999}]```. We can see that there is no *end* date
+when the ```get_years_active()``` function was returned, which concludes that he is still a working
+artist.
 
-On the other hand, when I input "Jimi Hendrix" into the ```Artist()``` function
-and ```[{u'start': 1963, u'end': 1970}]``` was printed to the console after I called the
-```get_years_active()``` function. Again, this proves that this function returns a list of
+On the other hand, when I inputted "Jimi Hendrix" into the ```Artist()``` function
+ ```[{u'start': 1963, u'end': 1970}]``` was returned after calling the function
+```get_years_active()```. Again, this proves that this function returns a list of
 a *start* date and an *end* date if the artist is not considered an artist anymore.
 
 ### 3. Mini-abstract and relevance of [matplotlib]:
