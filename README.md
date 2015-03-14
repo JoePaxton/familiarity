@@ -45,7 +45,8 @@ not that relevant today.
 The [familiarity] attribute is an easier value to analyze for the "strength value" between
 different artists, especially when it comes to different time periods. 
 
-*This answers question number 1*
+*This answers question 1*
+
 ### 2. Mini-abstract and relevance of [Echo Nest Artist API]:
 There is a function in the [Echo Nest Artist API] called ```get_years_active()``` and it returns
 the *start* and *end* year (if there is an *end*) of the artist's years active. In our case, we are
