@@ -91,7 +91,7 @@ an algorithm I implemented below:
 When I inputted *Chance, The Rapper* into the ```Artist()``` function, the ouput of his years being
 active are ```[{u'start': 2011}]``` until now, with a [familiarity] of ```0.576622``` and an area
 or "strength" of ```2.306488``` whereas, *Tower of Power* has been active from ```[{u'start': 1968}]```
-until now with a [familiarity] of ```0.624398```` and an area or "strength" of ```29.346706```. The
+until now with a [familiarity] of ```0.624398``` and an area or "strength" of ```29.346706```. The
 [familiarity] between the two artists are not too far apart; whereas, their "strength" attribute differs
 dramatically, due to the fact that *Tower of Power* has been active for 47 years and running. *Chance,
 The Rapper* has been active for only 4 years and running.
