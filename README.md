@@ -5,8 +5,9 @@ artist's active years.
 # Questions
 1. What kind of data does the [familiarity] attribute provide?
 2. How can we determine how long an artist has been active?
-3. Can we use [matplotlib] to visualize data we have?
-4. How can we compare and contrast the "strength" of each artist?
+3. How can we compare and contrast the "strength" of each artist?
+4. Can we use [matplotlib] to visualize data we have?
+
 
 
 # Resources
@@ -44,6 +45,7 @@ not that relevant today.
 The [familiarity] attribute is an easier value to analyze for the "strength value" between
 different artists, especially when it comes to different time periods. 
 
+*This answers question number 1*
 ### 2. Mini-abstract and relevance of [Echo Nest Artist API]:
 There is a function in the [Echo Nest Artist API] called ```get_years_active()``` and it returns
 the *start* and *end* year (if there is an *end*) of the artist's years active. In our case, we are
@@ -96,6 +98,7 @@ until now with a [familiarity] of ```0.624398``` and an area or "strength" of ``
 dramatically, due to the fact that *Tower of Power* has been active for 47 years and running. *Chance,
 The Rapper* has been active for only 4 years and running.
 
+*This answers questions 2 and 3*
 ### 3. Mini-abstract and relevance of [matplotlib]:
 Using the [matplotlib] API, I was able to ...
 
@@ -106,6 +109,8 @@ in a plot. What kind of plot? - Label all axes, title the plot, and make it look
 """
 
 ```
+
+*This answers question 4*
 
 [familiarity]: http://developer.echonest.com/forums/thread/839
 [Echo Nest Artist API]: https://github.com/echonest/pyechonest/blob/master/pyechonest/artist.py 
