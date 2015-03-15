@@ -100,19 +100,33 @@ dramatically, due to the fact that *Tower of Power* has been active for 47 years
 The Rapper* has been active for only 4 years and running.
 
 *This answers questions 2 and 3*
+
 ### 3. Mini-abstract and relevance of [matplotlib]:
-Using the [matplotlib] API, I was able to ...
+Using the [matplotlib] API, I was able to analyze the data visually. I plotted a scatter plot from
+the program I created, called [familiarity.py].
 
 ```python
-
-"""Snippet of code to represent an artist's familiarity over the years they have been active
-in a plot. What kind of plot? - Label all axes, title the plot, and make it look 'good'.
-"""
-
+     plt.xlim(xmin=0, xmax=yrs_active + 5)
+    """Need to figure out how to get actual years up there,
+    nstead of just the amount of years active..."""
+    plt.scatter(yrs_active, familiarity)
+    plt.title("Familiarity Over Years They Have Been Active")
+    plt.xlabel("Years Active")
+    plt.ylabel('Familiarity')
+    
+    plt.savefig("Familiarity of an Artist")
+    plt.show()
 ```
+When I run this snippet of code it only displays the ```yrs_active``` for the x-axis because the ```scatter()```
+function will only accept an ```int```. Earlier in the program, I was interested in seeing the *strength* attribute I
+implemented where I saved the *end* date minus the *start* date giving me the ```yrs_active``` variable. This variable
+was simply to figure out how many years they were active. In the future, I need to display the actual years they were
+active as opposed to the number of years they were active. Also, this would be better visualized in a bar plot when I
+start to compare multiple artist at a time.
 
 *This answers question 4*
 
 [familiarity]: http://developer.echonest.com/forums/thread/839
 [Echo Nest Artist API]: https://github.com/echonest/pyechonest/blob/master/pyechonest/artist.py 
 [matplotlib]: http://matplotlib.org/
+[familiarity.py]: 
