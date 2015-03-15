@@ -29,19 +29,22 @@ from pyechonest import artist
 a = artist.Artist("Lupe Fiasco")
 a.familiarity
 ```
-The [familiarity] of the artist *Lupe Fiasco* has a floating-point decimal value of 0.779026.
+The [familiarity] for the artist, *Lupe Fiasco* has a floating-point decimal value of 0.779026.
 This shows that the artist is very well-known, but not overwhelmingly "famous".
 
 On the other hand, the 'hotttness' attribute gives a floating-point decimal value that displays the
 "hype" or "buzz" an artist is getting currently. The 'hotttnesss' attribute is biased, in the sense
 that the attribute computes the "hype" currently; therefore, this does not accurately reflect the
 "hype" that some artists' receive if it was years ago such as *The Beatles*. In other words, if *The Beatles*
-were a band today, the 'hotttnesss' attribute would return a higher floating-point value. There is not much
-blog posts, website articles, or other website information about popular artists "back in the day" who are
-not that relevant today.
+were still a band today with the same amount of "buzz" as they had in the 1960s than the 'hotttnesss'
+attribute would return a higher floating-point value. There are not much blog posts, website articles, or
+other website information (Echo Nest algorithm for 'hotttnesss') about famous artists who were active several
+years ago or even decades ago. *The way they implement the 'hotttnesss' attribute is on the same link as
+[familiarity]*.
 
-The [familiarity] attribute is an easier value to analyze for the "strength value" between
-different artists, especially when it comes to different time periods. 
+The [familiarity] attribute is an easier value to compare the "strength value" ([familiarity] rate multiplied
+by the amount of years an artist has been active) against different artists, especially when it comes to
+different time periods. 
 
 *This answers question 1*
 
@@ -62,14 +65,13 @@ a.get_years_active()
 when the ```get_years_active()``` function was returned, which concludes that he is still a working
 artist.
 
-On the other hand, when I inputted "Jimi Hendrix" into the ```Artist()``` function
- ```[{u'start': 1963, u'end': 1970}]``` was returned after calling the function
-```get_years_active()```. Again, this proves that this function returns a list of
-a *start* date and an *end* date if the artist is not considered an artist anymore.
+On the other hand, when I inputted "Jimi Hendrix" into the ```Artist()``` function ```[{u'start': 1963, u'end': 1970}]```
+was returned after calling the function ```get_years_active()```. Again, this proves that this function
+returns a list of a *start* date and an *end* date if the artist is not considered an artist anymore.
 
-We need to compare artist's who have a high [familiarity] while being active for a short amount of
-time (in *years*) against artist who have a lower [familiarity] while being active for a longer
-period of time (in *years*). We can determine the "strength" of the artist's [familiarity] using
+We need to compare artist's who have a high [familiarity] rate while being active for a short amount of
+time (in *years*) against artist who have a lower [familiarity] rate while being active for a longer
+period of time (in *years*). We can determine the "strength" of the artist's [familiarity] rate using
 an algorithm I implemented below:
 
 ```python
@@ -100,8 +102,8 @@ The Rapper* has been active for only 4 years and running.
 *This answers questions 2 and 3*
 
 ### 3. Mini-abstract and relevance of [matplotlib]:
-Using the [matplotlib] API, I was able to analyze the data visually. I plotted a scatter plot from
-the program I created, called [familiarity.py].
+Using the [matplotlib] API, I was able to analyze the data explained from above visually. I plotted a
+scatter plot from the program I created, called [familiarity.py].
 
 ```python
 plt.xlim(xmin=0, xmax=yrs_active + 5)
@@ -115,12 +117,13 @@ plt.ylabel('Familiarity')
 plt.savefig("Familiarity of an Artist")
 plt.show()
 ```
-When I run this snippet of code it only displays the ```yrs_active``` for the x-axis because the ```scatter()```
-function will only accept an ```int```. Earlier in the program, I was interested in seeing the *strength* attribute I
-implemented where I saved the *end* date minus the *start* date giving me the ```yrs_active``` variable. This variable
-was simply to figure out how many years they were active. In the future, I need to display the actual years they were
-active as opposed to the number of years they were active. Also, this would be better visualized in a bar plot when I
-start to compare multiple artist at a time.
+When I run this snippet of code it displays the ```yrs_active``` for the x-axis because the ```scatter()```
+function will only accept an ```int```. The ```get_years_active()``` function from the ```pyechonest``` module
+is a list with only one index that has a *start* and an *end* value. Earlier in the program, I was interested
+in analyzing the *strength* attribute I implemented where I saved the *end* date minus the *start* date into the
+```yrs_active``` variable, in order to figure out how many years the artist has been active. In the future, I need
+to display the actual years they were active as opposed to the number of years they were active. Also, this would
+be better visualized in a bar plot when I start to compare multiple artist at a time.
 
 *This answers question 4*
 

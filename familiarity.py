@@ -18,7 +18,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def main():
-    # Use different artists to see the different values.
+    # Use different artists to compare the years active, familiarity, and strength.
     a = artist.Artist("Chance, The Rapper")
     x = a.get_years_active()
 
