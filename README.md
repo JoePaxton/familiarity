@@ -129,4 +129,4 @@ start to compare multiple artist at a time.
 [familiarity]: http://developer.echonest.com/forums/thread/839
 [Echo Nest Artist API]: https://github.com/echonest/pyechonest/blob/master/pyechonest/artist.py 
 [matplotlib]: http://matplotlib.org/
-[familiarity.py]: 
+[familiarity.py]: https://github.com/JoePaxton/familiarity/blob/master/familiarity.py
