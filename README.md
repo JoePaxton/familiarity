@@ -8,8 +8,6 @@ artist's active years.
 3. How can we compare and contrast the "strength" of each artist?
 4. Can we use [matplotlib] to visualize data we have?
 
-
-
 # Resources
 1. [familiarity]
 2. [Echo Nest Artist API]
@@ -75,21 +73,21 @@ period of time (in *years*). We can determine the "strength" of the artist's [fa
 an algorithm I implemented below:
 
 ```python
-    a = artist.Artist("Chance, The Rapper")
-    x = a.get_years_active()
-    familiarity = a.familiarity
+a = artist.Artist("Chance, The Rapper")
+x = a.get_years_active()
+familiarity = a.familiarity
 
-    start = x[0].get('start')
-    end = x[0].get('end')
+start = x[0].get('start')
+end = x[0].get('end')
     
-    if end is None:
-        end = 2015
+if end is None:
+    end = 2015
         
-    startValue = int(start)
-    endValue = int(end)
-    yrs_active = endValue - startValue
+startValue = int(start)
+endValue = int(end)
+yrs_active = endValue - startValue
 
-    strength = familiarity * yrs_active
+strength = familiarity * yrs_active
 ```
 When I inputted *Chance, The Rapper* into the ```Artist()``` function, the ouput of his years being
 active are ```[{u'start': 2011}]``` until now, with a [familiarity] of ```0.576622``` and an area
@@ -106,16 +104,16 @@ Using the [matplotlib] API, I was able to analyze the data visually. I plotted a
 the program I created, called [familiarity.py].
 
 ```python
-     plt.xlim(xmin=0, xmax=yrs_active + 5)
-    """Need to figure out how to get actual years up there,
-    nstead of just the amount of years active..."""
-    plt.scatter(yrs_active, familiarity)
-    plt.title("Familiarity Over Years They Have Been Active")
-    plt.xlabel("Years Active")
-    plt.ylabel('Familiarity')
+plt.xlim(xmin=0, xmax=yrs_active + 5)
+"""Need to figure out how to get actual years up there,
+instead of just the amount of years active..."""
+plt.scatter(yrs_active, familiarity)
+plt.title("Familiarity Over Years They Have Been Active")
+plt.xlabel("Years Active")
+plt.ylabel('Familiarity')
     
-    plt.savefig("Familiarity of an Artist")
-    plt.show()
+plt.savefig("Familiarity of an Artist")
+plt.show()
 ```
 When I run this snippet of code it only displays the ```yrs_active``` for the x-axis because the ```scatter()```
 function will only accept an ```int```. Earlier in the program, I was interested in seeing the *strength* attribute I
